@@ -6,7 +6,7 @@ const BooksMain = () =>{
     const [books, setBooks] = useState([]); 
     const fetchBooks = async () =>{
         try{
-            const ruta = await fetch("./json/BooksHub.json");
+            const ruta = await fetch("/json/BooksHub.json");
             const data = await ruta.json();
             setBooks(data);
         }catch(error){
